@@ -1,0 +1,13 @@
+---
+title: "Untitled"
+author: "Tristan Goodbody"
+date: "2022-11-08"
+output: html_document
+---
+
+
+```{r}
+csv <- read.csv("papers.csv")
+
+knitr::kable(csv, format = "html")
+```
