@@ -24,8 +24,8 @@ jobs:
       - uses: r-lib/actions/setup-renv@v2
       
       - name: Install rmarkdown
-        run: Rscript -e 'install.packages("rmarkdown")'
-      - name: Render README
+        run: Rscript -e 'install.packages(c("rmarkdown","DT"))'
+      - name: Render new html
         run: Rscript -e 'rmarkdown::render("index.Rmd")'
       - name: Commit results
         run: |
