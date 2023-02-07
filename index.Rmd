@@ -18,7 +18,7 @@ DT::datatable(csv[,1:6], escape = FALSE, rownames = FALSE, options = list(pageLe
 
 ## Journals that IRSS members have published in
 
-* [SJR](SCImago Journal Rank) - Journal rank
+* [SJR](https://en.wikipedia.org/wiki/SCImago_Journal_Rank) - Journal rank
 
 * Journal h-index
 
