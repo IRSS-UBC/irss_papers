@@ -2,6 +2,7 @@ on:
   push:
     paths:
       - papers.csv
+      - journal_list.csv
 
 name: Render my document
 
