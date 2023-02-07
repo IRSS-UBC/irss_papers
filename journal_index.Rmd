@@ -1,5 +1,5 @@
 ---
-title: "List of Journals in "
+title: "List of Journals in which IRSS members have published"
 output: html_document
 date: "`r Sys.Date()`"
 ---
