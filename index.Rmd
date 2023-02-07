@@ -13,5 +13,5 @@ csv$Title <- paste0("<a target =_blank href='",csv$Link,"'>",csv$Title,"</a>")
 
 names(csv) <- c("Topic", "Subtopic", "Author", "Year", "Type", "Title")
 
-DT::datatable(csv[,1:6], escape = FALSE, rownames = FALSE, options = list(pageLength = 50))
+DT::datatable(csv[,1:6], escape = FALSE, rownames = FALSE, options = list(pageLength = 25))
 ```
