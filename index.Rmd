@@ -7,30 +7,28 @@ date: "`r Sys.Date()`"
 ```{r, echo = FALSE, warning=FALSE, message = FALSE}
 library(DT)
 
-csv <- read.csv("papers.csv")
+csv <- read.csv("data/irss_articles.csv")
 
-csv$Title <- paste0("<a target =_blank href='",csv$Link,"'>",csv$Title,"</a>")
+# csv$Title <- paste0("<a target =_blank href='",csv$Link,"'>",csv$Title,"</a>")
 
-names(csv) <- c("Topic", "Subtopic", "Author", "Year", "Type", "Title")
+# names(csv) <- c("Topic", "Subtopic", "Author", "Year", "Type", "Title")
 
-DT::datatable(csv[,1:6], escape = FALSE, rownames = FALSE, options = list(pageLength = 15))
+DT::datatable(csv, escape = FALSE, rownames = FALSE, options = list(pageLength = 15))
 ```
 
 ## Journals that IRSS members have published in
 
-* [SJR](https://en.wikipedia.org/wiki/SCImago_Journal_Rank) - Journal rank
+* [Scientific Journal Rank (SJR)](https://www.scimagojr.com/journalrank.php)
 
-* Journal h-index
+* [Journal H-index](https://en.wikipedia.org/wiki/H-index)
 
-* Journal number 2-year citation rolling average
+* Number of IRSS publications in the journal
 
-* Median IRSS citations
-
-* Number of IRSS publications in that journal
+* Most recent IRSS publication in the journal (title, author, year)
 
 ```{r, echo = FALSE, warning=FALSE, message = FALSE}
 
-csv <- read.csv("journal_list.csv")
+csv <- read.csv("data/irss_journals_summary.csv")
 
-DT::datatable(csv[,1:ncol(csv)], rownames = FALSE,extensions = 'FixedColumns', options = list(pageLength = 15,autowidth = TRUE))
+DT::datatable(csv, rownames = FALSE,extensions = 'FixedColumns', options = list(pageLength = 15,autowidth = TRUE))
 ```
